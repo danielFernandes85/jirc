@@ -19,6 +19,7 @@ public class Server {
 
         try {
             ServerSocket serverSocket = new ServerSocket(localPort);
+            System.out.println("Server started, listening on port " + localPort + ".");
 
             // accepting clients
             while (true) {
@@ -81,7 +82,7 @@ public class Server {
                         sendToAll("Qual o pequeno almoço preferido do Dracula? Aveia!");
 
                     } else {
-                        sendToAll(name + " said: " + message);
+                        sendToAll(name + ": " + message);
                     }
                 }
 
@@ -94,11 +95,7 @@ public class Server {
             out.println(message);
         }
 
-        public void yellInsultAtClient() {
-            out.println("CHEIRAS MAL");
-        }
     }
-
 }
 
 
