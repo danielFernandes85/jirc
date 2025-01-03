@@ -19,7 +19,6 @@ public class ServerConnection {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         return serverMessage;
     }
 
